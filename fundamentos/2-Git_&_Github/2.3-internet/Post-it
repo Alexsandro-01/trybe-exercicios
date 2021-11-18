@@ -1,0 +1,18 @@
+
+1 - Primeiro o endereço é convertido em numero IP pelo DNS.
+
+2 - Os dados são enviados pelo protocolo TCP/IP
+
+2 - O ISP conecta a requisição do cliente com o servidor
+
+3 - Requisição da página para o servidor.
+
+4 - O servidor armazena e processa a requisição do cliente.
+
+5 - Servidor retorna a requisição, a comunicação entre o cliente e o servidor é feita
+com o protocolo HTTP ou HTTPS. 
+
+6 - Cliente recebe a requisição.
+
+7 - renderizar a página para o usuário.
+
