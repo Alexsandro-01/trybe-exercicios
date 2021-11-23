@@ -1,0 +1,48 @@
+div {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+div:hover {
+    border: solid 1px #333;
+}
+div:nth-child(3)  {
+    background-color: yellow;
+}
+div:nth-child(4) {
+    background-color: #ffd104;
+}
+div:nth-child(5) {
+    background-color: #cae003;
+    height: 100px;
+    line-height: 100px;
+}
+div:nth-child(6) {
+    background-color: #8aff04;
+}
+div:nth-child(7) {
+    background-color: #04ff58;
+}
+
+div:nth-child(3) h3 {
+    color: #04ff58;
+}
+div:nth-child(4) h3 {
+    color: deepskyblue;
+}
+div:nth-child(5) h3 {
+    color: deeppink;
+}
+div:nth-child(6) h3 {
+    color: orangered;
+}
+div:nth-child(7) h3 {
+    color: aliceblue;
+}
+div:nth-child(odd) h3 {
+    font-style: italic;
+}
+
+
+
+
