@@ -1,0 +1,57 @@
+h1 {
+  text-align: center;
+}
+
+
+.first {
+  background-color: rgb(235, 200, 84);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+}
+
+.second {
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  display: inline-block;
+}
+
+.third {
+  background-color: rgb(170, 142, 106);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  display: inline-block;
+}
+
+.position-2-3 {
+  margin: 0 auto;
+  width: 604px;
+}
+
+.position-1 {
+  margin: auto;
+  width: 200px;
+}
+
+.premiacao {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+
+li {
+  display: inline-block;
+}
+
+
