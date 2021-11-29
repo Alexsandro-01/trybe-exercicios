@@ -37,5 +37,45 @@ for(let number of numbers) {
 }
 console.log(big) */
 
+// console.log()
 
 
+// Descubra quantos valores ímpares existem no array e imprima o resultado.
+/* let sun = 0
+for(let number of numbers) {
+  if(number % 2 !== 0) {
+    sun++
+  }
+}
+if(sun === 0) {
+  console.log('Nenhum valor Ímpar')
+}
+else {
+  console.log(sun)
+} */
+
+
+/* Utilizando for , descubra qual o menor valor contido no array e imprima-o
+let sun = null
+for(let number of numbers) {
+  if(sun == null) {
+    sun = number
+  }
+  else if(number < sun) {
+    sun = number
+  }
+}
+console.log(sun) */
+
+//Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+let arr = []
+for(let i = 1; i <= 25; i += 1) {
+  arr.push(i)
+}
+console.log(arr)
+
+
+/* Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 . */
+for(let val of arr) {
+  console.log(val + " / " + '2' + " = " + (val / 2))
+}
