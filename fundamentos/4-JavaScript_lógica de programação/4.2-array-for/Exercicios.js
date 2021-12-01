@@ -75,7 +75,7 @@ for(let i = 1; i <= 25; i += 1) {
 console.log(arr)
 
 
-/* Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 . */
+/* git  */
 for(let val of arr) {
   console.log(val + " / " + '2' + " = " + (val / 2))
 }
