@@ -93,25 +93,27 @@ console.log(test1) */
 function compare(palavra, fim) {
   let a = palavra.split('')
   let b = fim.split('')
-  let test1 = []
-  let test2 = []
+  let test = 0
 
 
-  for(let j = a.length; j >= b.length; j -= 1) {
+  for(let j = 1; j < a.length; j += 1) {
 
-    test1.push(a[j])
-    test2.push(b[j])
+    if(a[a.length - j] === b[b.length - j]) {
+      test += 1
+    }
+
   }
 
-  /* if(test1 == test2) {
+  if(test == b.length) {
     return true
   }
   else {
     return false
-  } */
-  console.log(test1)
-  console.log(test2)
+  }
+  //console.log(test)
+
 }
 
 console.log(compare('alexsandro', 'sandro'))
+//compare('alexsandro', 'sandro')
 
