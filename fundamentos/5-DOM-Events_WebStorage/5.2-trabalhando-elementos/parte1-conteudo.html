@@ -53,6 +53,20 @@
   //A partir desse filho criado, acesse terceiroFilho
   let elemCriado = estou.firstElementChild.lastElementChild
   elemCriado.innerText = 'Oi'
-  console.log(elemCriado.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling)
+  //console.log(elemCriado.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling)
+
+
+  //Exercicio do conteudo 3
+
+  //Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+  console.log(estou)
+  estou.lastElementChild.remove()
+
+  estou.nextSibling.remove()
+  estou.nextSibling.remove()
+  estou.nextElementSibling.remove()
+
+  estou.previousElementSibling.remove()
+
 </script>
 </html>
