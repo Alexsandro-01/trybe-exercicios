@@ -27,7 +27,7 @@
   //Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
   estou.parentNode.style.color = 'red'
 
-  
+
   estou.firstElementChild.innerText = 'Primeiro filho do filho'
 
   estou.parentNode.firstElementChild.innerText = 'Primeiro filho a partir do pai'
@@ -35,6 +35,24 @@
   //console.log(estou.nextElementSibling)
 
   let pai = document.querySelector('#pai')
-  console.log(pai.lastElementChild.previousElementSibling)
+  //console.log(pai.lastElementChild.previousElementSibling)
+  //console.log(estou)
+
+  //Exercicio parte 2 do conteudo
+  //Crie um irmão para elementoOndeVoceEsta .
+  let sec = document.createElement('section')
+  estou.parentElement.appendChild(sec)
+
+  //Crie um filho para elementoOndeVoceEsta 
+  estou.appendChild(sec)
+
+  //Crie um filho para primeiroFilhoDoFilho .
+  estou.firstElementChild.appendChild(sec)
+  //console.log(estou.firstElementChild)
+
+  //A partir desse filho criado, acesse terceiroFilho
+  let elemCriado = estou.firstElementChild.lastElementChild
+  elemCriado.innerText = 'Oi'
+  console.log(elemCriado.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling)
 </script>
 </html>
