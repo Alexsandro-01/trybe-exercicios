@@ -93,4 +93,20 @@ listener('#btn-holiday')
 
 // 4
 makeBtn('Sexta-feira', 'btn-friday')
+
+// 5
 listener('#btn-friday')
+
+// 6
+function overLeave() {
+  let daysZoom = document.querySelectorAll('.day')
+  for(let day of daysZoom) {
+    day.addEventListener('mouseover', function(e) {
+      e.target.style.cssText = 'font-size: 1.5rem; background: #09F06D'
+    })
+    day.addEventListener('mouseleave', function(e) {
+      e.target.style.cssText = 'font-size: 20px; background: rgb(238,238,238)'
+    })
+  }
+}
+overLeave()
