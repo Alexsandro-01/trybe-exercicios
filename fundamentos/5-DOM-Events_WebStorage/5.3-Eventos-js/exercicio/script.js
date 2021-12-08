@@ -85,17 +85,17 @@ function spotDays(e) {
   }
 }
 
-function listener(id) {
-  let btnHoliday = document.querySelector(id)
-  btnHoliday.addEventListener('click', spotDays)
+function listener(seletor, func) {
+  let btnHoliday = document.querySelector(seletor)
+  btnHoliday.addEventListener('click', func)
 }
-listener('#btn-holiday')
+listener('#btn-holiday', spotDays)
 
 // 4
 makeBtn('Sexta-feira', 'btn-friday')
 
 // 5
-listener('#btn-friday')
+listener('#btn-friday', spotDays)
 
 // 6
 function overLeave() {
@@ -110,3 +110,19 @@ function overLeave() {
   }
 }
 overLeave()
+
+// 7
+function newTask() {
+  let task = document.querySelector('#task-input')
+  let myTasks = document.querySelector('.my-tasks')
+  let span = document.createElement('span')
+
+  span.innerText = task.value
+
+  myTasks.appendChild(span)
+
+  task.value = ''
+}
+
+listener('#btn-add', newTask)
+
