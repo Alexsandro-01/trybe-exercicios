@@ -49,4 +49,14 @@ function days() {
   }
 }
 //console.log(ul)
-days()
+window.onload = days()
+
+function holidays(feriados) {
+  let btn = document.createElement('button')
+  btn.setAttribute('id', 'btn-holiday')
+  btn.innerText = 'Feriados'
+
+  let divBtn = document.querySelector('.buttons-container')
+  divBtn.appendChild(btn)
+}
+holidays()
