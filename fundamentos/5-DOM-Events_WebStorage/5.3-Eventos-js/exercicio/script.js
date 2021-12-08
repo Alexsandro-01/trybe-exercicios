@@ -136,3 +136,12 @@ function taskLegend(cor) {
   myTask.appendChild(div)
 }
 taskLegend('deepskyblue')
+
+// 9
+function select(e) {
+ let div = e.target
+ 
+ div.classList.toggle('selected')
+}
+
+listener('.task', select)

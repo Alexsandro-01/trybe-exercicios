@@ -163,3 +163,6 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
+.selected {
+  background-color: red;
+}
