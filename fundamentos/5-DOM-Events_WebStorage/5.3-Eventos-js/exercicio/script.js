@@ -33,13 +33,11 @@ function days() {
       }
       li.innerText = day
       ul.appendChild(li)
-      log(day)
     }
     else if(day == 4 || day == 11 || day == 18) {
       li.classList.add("day", "friday")
       li.innerText = day
       ul.appendChild(li)
-      log(day)
     }
     else {
       li.classList.add("day")
@@ -51,12 +49,29 @@ function days() {
 //console.log(ul)
 window.onload = days()
 
-function holidays(feriados) {
+function makeBtn(day, id) {
   let btn = document.createElement('button')
-  btn.setAttribute('id', 'btn-holiday')
-  btn.innerText = 'Feriados'
+  btn.setAttribute('id', id)
+  btn.innerText = day
 
   let divBtn = document.querySelector('.buttons-container')
   divBtn.appendChild(btn)
 }
-holidays()
+makeBtn('Feriados', 'btn-holiday')
+
+function spotHolidays() {
+  let holidays = document.querySelectorAll('.holiday')
+  for( let day of holidays){
+    if(day.style.background === 'darkred') {
+      day.style.background = 'rgb(238,238,238)'
+    }
+    else {
+      day.style.background = 'darkred'
+    }
+  }
+
+
+}
+
+let btnHoliday = document.querySelector('#btn-holiday')
+btnHoliday.addEventListener('click', spotHolidays)
