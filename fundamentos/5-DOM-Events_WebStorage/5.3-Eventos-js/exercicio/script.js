@@ -21,6 +21,7 @@ function log(val) {
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 const ul = document.querySelector('#days')
 
+// 1
 function days() {
   
   for(let day of dezDaysList) {
@@ -48,7 +49,7 @@ function days() {
 }
 //console.log(ul)
 window.onload = days()
-
+// 2
 function makeBtn(day, id) {
   let btn = document.createElement('button')
   btn.setAttribute('id', id)
@@ -59,6 +60,7 @@ function makeBtn(day, id) {
 }
 makeBtn('Feriados', 'btn-holiday')
 
+// 3
 function spotHolidays() {
   let holidays = document.querySelectorAll('.holiday')
   for( let day of holidays){
@@ -75,3 +77,6 @@ function spotHolidays() {
 
 let btnHoliday = document.querySelector('#btn-holiday')
 btnHoliday.addEventListener('click', spotHolidays)
+
+// 4
+makeBtn('Sexta-feira', 'btn-friday')
