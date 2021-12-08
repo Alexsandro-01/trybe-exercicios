@@ -126,3 +126,13 @@ function newTask() {
 
 listener('#btn-add', newTask)
 
+// 8
+function taskLegend(cor) {
+  let div = document.createElement('div')
+  div.className = 'task'
+  div.style.background = cor
+
+  let myTask = document.querySelector('.my-tasks')
+  myTask.appendChild(div)
+}
+taskLegend('deepskyblue')
