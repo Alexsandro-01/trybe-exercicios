@@ -61,22 +61,36 @@ function makeBtn(day, id) {
 makeBtn('Feriados', 'btn-holiday')
 
 // 3
-function spotHolidays() {
-  let holidays = document.querySelectorAll('.holiday')
-  for( let day of holidays){
-    if(day.style.background === 'darkred') {
-      day.style.background = 'rgb(238,238,238)'
-    }
-    else {
-      day.style.background = 'darkred'
-    }
+function spotDays(e) {
+
+  if(e.target.id == 'btn-holiday') {
+    spot('.holiday', 'darkred')
+    //log()
+  }
+  else {
+    spot('.friday', 'deepskyblue')
   }
 
+  function spot(selector, color) {
+    let holidays = document.querySelectorAll(selector, color)
+    for( let day of holidays){
 
+      if(day.style.background !== color) {
+        day.style.background = color
+      }
+      else /* if(day.style.background === 'rgb(238,238,238)') */ {
+        day.style.background = 'rgb(238,238,238)'
+      }
+    }
+  }
 }
 
-let btnHoliday = document.querySelector('#btn-holiday')
-btnHoliday.addEventListener('click', spotHolidays)
+function listener(id) {
+  let btnHoliday = document.querySelector(id)
+  btnHoliday.addEventListener('click', spotDays)
+}
+listener('#btn-holiday')
 
 // 4
 makeBtn('Sexta-feira', 'btn-friday')
+listener('#btn-friday')
