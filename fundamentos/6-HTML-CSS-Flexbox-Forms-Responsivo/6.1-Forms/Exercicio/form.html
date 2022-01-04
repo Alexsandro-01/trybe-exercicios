@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main>
+    <section>
+      <form action="">
+        <fieldset>
+          <div>
+            <input type="text" id="nome" maxlength="40" required placeholder="Nome">
+          </div>
+          <div>
+            <input type="email" id="email" maxlength="50" required placeholder="E-mail">
+          </div>
+          <div>
+            <input type="text" id="cpf" maxlength="11" required placeholder="CPF">
+          </div>
+          <div>
+            <input type="text" id="endereco" maxlength="200" required placeholder="Endereco">
+          </div>
+          <div>
+            <input type="text" id="cidade" maxlength="28" required placeholder="Cidade">
+          </div>
+          <div>
+            <select id="estados" required></select>
+          </div>
+
+          <label for="casa">
+            <input type="radio" id="casa" name="residencia" required>
+            Casa
+          </label>
+          <label for="apart">
+            <input type="radio" id="apart" name="residencia" required>
+            Apartamento
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label for="resumo">
+            Resumo <br>
+            <textarea name="resumo" id="resumo" cols="30" rows="10" maxlength="1000" required></textarea>
+          </label>
+          <label for="cargo">
+            Cargo <br>
+            <input type="text" id="cargo" name="cargo" required>
+          </label>
+          <label for="descricao-cargo">
+            Descrição do Cargo <br>
+            <input type="text" id="descricao-cargo" maxlength="500" required>
+          </label>
+          <label for="data-inicio">
+            Data de início <br>
+            <input type="text" id="data-inicio" required>
+          </label>
+        </fieldset>
+
+        <button type="submit" id="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

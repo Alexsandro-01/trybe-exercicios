@@ -1,0 +1,11 @@
+form {
+  width: 500px;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  padding: 10px;
+}
