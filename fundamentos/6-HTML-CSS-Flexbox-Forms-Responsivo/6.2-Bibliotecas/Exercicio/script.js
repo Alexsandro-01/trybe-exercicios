@@ -1,3 +1,94 @@
+const selectEstate = document.querySelector('#estados')
+
+const states = [
+  'Selecione',
+  'Acre',
+  'Alagoas',
+  'Amapá',
+  'Amazonas',
+  'Bahia',
+  'Ceara',
+  'Distrito Federal',
+  'Espírito Santo',
+  'Goiás',
+  'Maranhão',
+  'Mato Grosso',
+  'Mato Grosso do Sul',
+  'Minas Gerais',
+  'Pará',
+  'Paraíba',
+  'Paraná',
+  'Pernambuco',
+  'Piauí',
+  'Rio de Janeiro',
+  'Rio Grande do Norte',
+  'Rio Grande do Sul',
+  'Rondônia',
+  'Roraima',
+  'Santa Catarina',
+  'São Paulo',
+  'Sergipe',
+  'Tocantins'
+  ]
+  
+  const state_nick = [
+    '',
+    'AC',
+    'AL',	
+    'AP',	
+    'AM',	
+    'BA',	
+    'CE',	
+    'DF',	
+    'ES',	
+    'GO',	
+    'MA',	
+    'MT',	
+    'MS',	
+    'MG',	
+    'PA',	
+    'PB',	
+    'PR',	
+    'PE',	
+    'PI',	
+    'RJ',	
+    'RN',	
+    'RS',	
+    'RO',	
+    'RR',	
+    'SC',	
+    'SP',	
+    'SE',	
+    'TO'	
+  ]
+  
+  function makeOptionsSelect() { 
+    for (let i = 0; i < states.length; i += 1) {
+      let option = document.createElement('option')
+      option.innerText = states[i]
+      option.value = state_nick[i]
+      selectEstate.appendChild(option)
+    }
+  }
+  makeOptionsSelect()
+
+// DatePickerX
+document.getElementById('data-inicio').DatePickerX.init();
+
+// JustValidate
+// https://github.com/horprogs/Just-validate
+const validate = new window.JustValidate('#form')
+
+validate.addField('#nome', [
+  {
+    rule: 'maxLength',
+    value: 40
+  },{
+    rule: 'required',
+    errorMessage: 'O nome precisa ser preenchido!'
+  }
+])
+
 /* const nome = document.querySelector('#nome')
 
 console.log(nome)
@@ -7,7 +98,7 @@ const endereco = document.querySelector('#endereco')
 const cidade = document.querySelector('#cidade')
 const casa = document.querySelector('#casa')
 const apart = document.querySelector('#apart')
-const selectEstate = document.querySelector('#estados')
+
 
 const resumo = document.querySelector('#resumo')
 const cargo = document.querySelector('#cargo')
@@ -23,77 +114,6 @@ function aviso(text) {
   span.style.display = 'block'
   return span
 }
-
-const states = [
-'Acre',
-'Alagoas',
-'Amapá',
-'Amazonas',
-'Bahia',
-'Ceara',
-'Distrito Federal',
-'Espírito Santo',
-'Goiás',
-'Maranhão',
-'Mato Grosso',
-'Mato Grosso do Sul',
-'Minas Gerais',
-'Pará',
-'Paraíba',
-'Paraná',
-'Pernambuco',
-'Piauí',
-'Rio de Janeiro',
-'Rio Grande do Norte',
-'Rio Grande do Sul',
-'Rondônia',
-'Roraima',
-'Santa Catarina',
-'São Paulo',
-'Sergipe',
-'Tocantins'
-]
-
-const state_nick = [
-  'AC',
-  'AL',	
-  'AP',	
-  'AM',	
-  'BA',	
-  'CE',	
-  'DF',	
-  'ES',	
-  'GO',	
-  'MA',	
-  'MT',	
-  'MS',	
-  'MG',	
-  'PA',	
-  'PB',	
-  'PR',	
-  'PE',	
-  'PI',	
-  'RJ',	
-  'RN',	
-  'RS',	
-  'RO',	
-  'RR',	
-  'SC',	
-  'SP',	
-  'SE',	
-  'TO'	
-]
-
-function makeOptionsSelect() {
-
-  for (let i = 0; i < states.length; i += 1) {
-    let option = document.createElement('option')
-    option.innerText = states[i]
-    option.value = state_nick[i]
-    selectEstate.appendChild(option)
-  }
-}
-makeOptionsSelect()
 
 function preven(e) {
   e.preventDefault()
@@ -113,7 +133,4 @@ function emailTest() {
     email.parentElement.appendChild(aviso('O Email está vazio'))
   }
 }
- */
-
-
-document.getElementById('data-inicio').DatePickerX.init();
+*/
