@@ -1,8 +1,8 @@
 body {
-  background-color: antiquewhite;
+  background-color: white;
 }
 .box-style {
-  margin: 20px 0;
+  margin: 20px auto;
   background-color: white;
   box-shadow: 0px 0px 5px #888;
 }

@@ -83,11 +83,91 @@ validate.addField('#nome', [
   {
     rule: 'maxLength',
     value: 40
-  },{
+  },
+  {
     rule: 'required',
     errorMessage: 'O nome precisa ser preenchido!'
   }
 ])
+.addField('#email', [
+  {
+    rule: 'maxLength',
+    value: 50
+  },
+  {
+    rule: 'required',
+    errorMessage: 'O email precisa ser preenchido!'
+  },
+  {
+    rule: 'email',
+    errorMessage: 'Email inválido!!'
+  }
+])
+.addField('#cpf', [
+  {
+    rule: 'maxLength',
+    value: 14,
+    errorMessage: 'Deve conter apenas 11 dígitos!'
+  },
+  {
+    rule: 'required',
+    errorMessage: 'O CPF precisa ser preenchido!'
+  }
+])
+.addField('#endereco', [
+  {
+    rule: 'maxLength',
+    value: 200
+  },
+  {
+    rule: 'required',
+    errorMessage: 'Endereço não preenchido!'
+  }
+])
+.addField('#cidade', [
+  {
+    rule: 'maxLength',
+    value: 28
+  },
+  {
+    rule: 'required',
+    errorMessage: 'A cidade precisa ser preenchida!'
+  }
+])
+.addField('#estados', [
+  {
+    rule: 'required',
+    errorMessage: 'O seu Estado precisa ser preenchido!'
+  }
+])
+.addRequiredGroup('#radios', 'Você precisa selecionar uma opção')
+.addField("#resumo", [
+  {
+    rule: 'required',
+    errorMessage: 'Resumo não preenchido!'
+  }
+])
+.addField('#cargo', [
+  {
+    rule: 'required',
+    errorMessage: 'Cargo não preenchido!'
+  }
+])
+.addField('#descricao-cargo', [
+  {
+    rule: 'required',
+    errorMessage: 'Descrição do cargo não preenchida!'
+  }
+])
+.addField('#data-inicio', [
+  {
+    rule: 'required',
+    errorMessage: 'Data não preenchida!'
+  }
+]).onSuccess((e) => {
+  console.log(document.querySelector('#form'))
+})
+
 
 /* const nome = document.querySelector('#nome')
 
