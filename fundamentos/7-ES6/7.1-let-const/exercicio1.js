@@ -12,3 +12,15 @@ const testingScope = (escopo) => {
 }
 
 testingScope(true);
+
+/* Exercicio II */
+
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+// Seu código aqui.
+const order = (param) => {
+  const arr = param.sort((a,b) => a - b);
+  return arr;
+}
+
+console.log(order(oddsAndEvens)); // será necessário alterar essa linha 😉
