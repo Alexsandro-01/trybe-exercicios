@@ -17,4 +17,27 @@ const longestWord = (phrase) => { console.log(phrase.split(' ').sort((a,b) => a.
 
 longestWord('Antônio foi no banheiro e não sabemos o que aconteceu')
 
+// III
+
+/* Está no HTML */
+
+// IV
+const someStg = 'Tryber x aqui!';
+const habil = ['HTML', 'CSS', 'JavaScript', 'BASH', 'GIT'];
+habil.sort();
+
+const fun1 = (stg) => someStg.replace('x', stg);
+
+const fun2 = (param) => {
+  return  `${param} Minhas cinco principais habilidades são:
+  
+  ${habil[0]};
+  ${habil[1]};
+  ${habil[2]};
+  ${habil[3]};
+  ${habil[4]}; ... #goTrybe.
+  `
+}
+
+console.log( fun2( fun1('Alex') ) )
 
