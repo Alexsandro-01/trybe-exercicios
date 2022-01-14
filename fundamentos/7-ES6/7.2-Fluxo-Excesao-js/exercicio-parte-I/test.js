@@ -40,3 +40,20 @@ const fun = (v) => {
 console.log(fun(n2))
 
 '👨‍💻'
+
+// ===================================//
+
+const count = (n) => {
+  let counter = 0;
+
+  for (let i = n; i > 0; i--) {
+    counter = counter + i;
+  }
+
+  return counter;
+}
+
+console.log(count(5))
+
+// ((1+number).number)/2 
+// somar numeros 1 + 2 + 3 + 4 + 5

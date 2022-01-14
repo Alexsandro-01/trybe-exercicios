@@ -1,0 +1,18 @@
+npm init -y 
+cria o package.json
+
+Não se preocupe se essas informações ainda não fizerem sentido pra você. Futuramente vamos retornar e explicar o que cada um desses dados representa. No momento, é importante saber apenas que o package.json é um objeto que armazena uma série de informações sobre o seu projeto.
+b. Agora precisamos editar nosso package.json . Você deve ter observado que na chave "test" em "script" temos a seguinte informação: "test": "echo \"Error: no test specified\" && exit 1" . Isso significa que a nossa aplicação ainda não possui um script que defina como lidar com testes. Então vamos trocar essa informação por "test": "jest" . Não se esqueça de salvar o arquivo. Após a alteração teremos algo parecido com:
+
+npm install --save-dev jest
+instala o jest
+
+adicionar o node_modules ao .gitignore
+
+const sum = (a, b) => a + b;
+
+test('sums two values', () => {
+  expect(sum(2, 3)).toEqual(5);
+});
+
+função para verificar se o jest está realmente funcionando.
