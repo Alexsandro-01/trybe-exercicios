@@ -42,17 +42,11 @@ const searchEmployee = (id, detail) => {
   // Implemente seu código aqui
 
   for (let val of professionalBoard) {
-    if(val.id === id) {
-      // console.log(val);
-      const arr = Object.values(val);
-      for (let index of arr) {
-        if (index === detail) {
-          console.log(val);
-        }
-      }
+    const arr = Object.values(val);
+    if(arr.find(e => e === id))
 
-    }
   }
+
 
 
 };
