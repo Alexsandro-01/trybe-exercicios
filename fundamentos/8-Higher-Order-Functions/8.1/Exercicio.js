@@ -28,4 +28,3 @@ const newColab = (nome) => {
 }
 
  console.log(newEmployees(newColab));
-
