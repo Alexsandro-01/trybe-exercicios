@@ -1,8 +1,9 @@
+// eslint-disable-next-line no-undef
 const books = require('./books');
 
 // Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 
-const expectedResult = [
+/* const expectedResult = [
   { 
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
@@ -31,7 +32,7 @@ const expectedResult = [
     author: { name: 'Frank Herbert', birthYear: 1920 },
     releaseYear: 1965
   }
-];
+]; */
 
 function fantasyOrScienceFiction(books) {
   // escreva seu código aqui
@@ -39,7 +40,7 @@ function fantasyOrScienceFiction(books) {
     if (book.genre === 'Fantasia' || book.genre === 'Ficção Científica') {
       return book;
     }
-  })
+  });
   console.log(result);
 }
 fantasyOrScienceFiction(books);

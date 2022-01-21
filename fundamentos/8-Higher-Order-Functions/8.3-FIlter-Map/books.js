@@ -63,4 +63,5 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+// eslint-disable-next-line no-undef
 module.exports = books;

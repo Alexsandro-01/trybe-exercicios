@@ -1,8 +1,9 @@
+// eslint-disable-next-line no-undef
 const books = require('./books');
 
 // Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
 
-const expectedResult = 'O Senhor dos Anéis';
+// const expectedResult = 'O Senhor dos Anéis';
 
 function authorWith3DotsOnName(books) {
   // escreva seu código aqui

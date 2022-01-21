@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 const books = require('./books');
 
 // Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author ,
@@ -5,7 +6,7 @@ const books = require('./books');
 // O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando 
 // o livro foi lançado.
 
-const expectedResult = [
+/* const expectedResult = [
   {
     age: 31,
     author: 'Isaac Asimov',
@@ -30,7 +31,7 @@ const expectedResult = [
     age: 62,
     author: 'J. R. R. Tolkien',
   },
-];
+]; */
 
 function nameAndAge(books) {
   // escreva seu código aqui
