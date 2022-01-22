@@ -41,11 +41,11 @@ const professionalBoard = [
 const searchEmployee = (id, detail) => {
   // Implemente seu código aqui
 
-  for (let val of professionalBoard) {
+  /* for (let val of professionalBoard) {
     const arr = Object.values(val);
     if(arr.find(e => e === id))
-
-  }
+  } */
+  
 
 
 
