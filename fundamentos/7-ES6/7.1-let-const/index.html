@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    main {
+      height: 100vh;
+      background-color: rgb(21,32,43);
+      color: lightgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      width: 200px;
+      justify-content: space-around;
+      text-align: center;
+      font-size: 50px;
+    }
+
+    #btn {
+      padding: 15px;
+      background-color: lightskyblue;
+      border: rgb(26, 185, 248) solid 3px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: rgb(21,32,43);
+      font-size: large;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div>
+      <span>0</span>
+      <button id="btn">Count</button>
+    </div>
+  </main>
+
+  <script defer>
+    const clickCount = document.querySelector('#btn');
+    const count = document.querySelector('span');
+
+    const refresh = () => { count.innerText = `${Number(count.innerText) + 1}` }
+
+    clickCount.addEventListener('click', refresh);
+  </script>
+</body>
+</html>

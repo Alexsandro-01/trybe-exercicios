@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: wheat;
+  font-size: 20px;
+  padding: 15px;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+li {
+  line-height: 1.5em;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  
+}
