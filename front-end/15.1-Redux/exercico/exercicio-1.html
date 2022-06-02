@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  <!-- <script src="script.js" defer /> -->
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      height: 50px;
+      width: 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <p>Color: <span id="value">white</span></p>
+    <button id="previous">Previous color</button>
+    <button id="next">Next color</button>
+  </div>
+
+  <script>
+
+    const ESTADO_INICIAL = {
+      colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+      index: 0,
+    };
+
+    function incrementIndex(index) {
+      if (index < 5) {
+        return index += 1;
+      }
+      return index = 0;
+    }
+
+    function decrementIndex(index) {
+      if (index > 0) {
+        return index -= 1;
+      }
+      return index = 5;
+    }
+
+    const reducer = (state = ESTADO_INICIAL, action) => {
+      switch (action.type) {
+        case 'NEXT_COLOR':
+          return {
+            ...state,
+            index: incrementIndex(state.index),
+          }
+          break;
+        case 'PREVIOUS_COLOR':
+          return {
+            ...state,
+            index: decrementIndex(state.index),
+          }
+          break;
+
+        default:
+          return state;
+          break;
+      }
+    }
+
+    const store = Redux.createStore(reducer);
+    // store.dispatch({type: 'PREVIOUS_COLOR'})
+    
+    const previous = document.getElementById('previous');
+    const next = document.getElementById('next');
+    
+    previous.addEventListener('click', () => {
+      store.dispatch({type: 'PREVIOUS_COLOR'})
+    })
+    next.addEventListener('click', () => {
+      store.dispatch({ type: 'NEXT_COLOR' });
+    })
+
+    store.subscribe(() => {
+      const { colors, index } = store.getState()
+
+      const container = document.getElementById('container');
+      const colorName = document.getElementById('value');
+
+      container.style.background = colors[index];
+      colorName.innerHTML = colors[index];
+    })
+  </script>
+</body>
+
+</html>
