@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin:  0;
+  box-sizing: border-box;
+}
+.App-header {
+  background-color: rgb(21, 32, 43);
+  color: #ccc;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100px;
+}
+
+ul {
+  list-style: none;
+  margin: 40px;
+}
+
+.card {
+  padding: 20px;
+  margin: 10px 0;
+  border: solid 1px #999;
+  border-radius: 10px;
+}
+
+.card p {
+  padding: 7px;
+}
+
+.card p span {
+  color: #fff;
+}
+
+.footer {
+  background-color: rgb(23, 51, 78);
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+}
+
+.green {
+  background-color: #04a882;
+  color: rgb(21, 32, 43);
+}
+
+.yellow {
+  background-color: goldenrod;
+}
