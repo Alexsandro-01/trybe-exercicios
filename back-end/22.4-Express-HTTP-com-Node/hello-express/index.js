@@ -1,10 +1,10 @@
 const express = require('express');
 
 const app = express(); // 1
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 
-app.use(bodyParser.json()); // para usar body na requisição
+app.use(express.json()); // para usar body na requisição
 
 const recipes = [
   { id: 1, name: 'Lasanha', price: 40.0, waitTime: 30 },
