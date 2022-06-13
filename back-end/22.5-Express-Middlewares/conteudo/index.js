@@ -15,7 +15,6 @@ app.use(authMiddleware); // middleware de autenticação;
 
 /* Todas as rotas com /recipes/<alguma-coisa> entram aqui e vão para o roteador. */
 const recipesRouter = require('./recipesRouter');
-
 app.use('/recipes', recipesRouter);
 
 // // vai pedir autenticação para todas as rotas que estão abaixo;
