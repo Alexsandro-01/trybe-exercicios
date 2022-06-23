@@ -1,0 +1,69 @@
+## QUESTÃO 4
+
+# # versão do compose
+# version: '3'
+
+# # serviços a serem usados
+# services:
+#   # nome do serviço, pode ser qualquer : nome da imagem docker
+#   db: 
+#     image: mysql:5.7
+#     # caminho de volumes
+#     volumes:
+#       - db_data:/var/lib/mysql
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: wordpress
+#       MYSQL_DATABASE: wordpress
+#       MYSQL_USER: wordpress
+#       MYSQL_PASSWORD: wordpress
+
+#   wordpress:
+#     # qual serviço o wordpress depend
+#     depends_on:
+#       - db
+#     image: wordpress:latest
+#     ports:
+#     - "8000:80"
+#     restart: always
+#     environment:
+#       MYSQL_DB_HOST: db:3306
+#       MYSQL_USER: wordpress
+#       MYSQL_PASSWORD: wordpress
+# volumes:
+#   db_data:
+version: '3'
+
+services:
+
+  ghost:
+    image: ghost:1-alpine
+    restart: always
+    ports:
+      - 2368:2368
+    depends_on:
+      - "db"
+    environment:
+      # see https://ghost.org/docs/config/
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: root
+      database__connection__password: example
+      database__connection__database: ghost
+    networks:
+      - my-network
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - my-network
+volumes:
+  db-data:
+
+networks:
+  my-network:
