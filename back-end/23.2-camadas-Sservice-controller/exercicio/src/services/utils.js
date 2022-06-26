@@ -1,7 +1,10 @@
 function throwError(code, message) {
-  const erro = new Error(message);
-  erro.code = code;
-  throw erro;
+  return {
+    error: {
+      code,
+      message,
+    },
+  };
 }
 
 module.exports = throwError;
