@@ -1,26 +1,36 @@
 const cepServices = require('../services/cepServices');
 
-async function get(req, res, next) {
+async function get(req, res) {
   const { cep } = req.params;
 
-  const valid = cepServices.isValid(cep);
-  if (valid.error) next(valid.error);
+  cepServices.isValid(cep);
+  // if (valid.error) next(valid.error);
 
-  const exists = await cepServices.exists(cep);
-  if (exists.error) next(exists.error);
+  await cepServices.exists(cep);
+  // if (exists.error) next(exists.error);
 
   const data = await cepServices.get(cep);
   res.status(200).json(data);
 }
 
-async function create(req, res, next) {
+async function create(req, res) {
   const newCep = req.body;
   
-  const cepValid = cepServices.validateNewCep(newCep);
+  // validar se está no formato
+  cepServices.validateNewCep(newCep);
   
-  if (cepValid.error) next(cepValid.error);
+  // checa se já existe no bd
+  const exist = await cepServices.alreadyExists(newCep.cep);
 
-  // res.status(200).json({ message: 'I arrived there' });
+  // se não existe, cria
+  if (!exist) {
+    const data = await cepServices.create(newCep);
+
+    if (data.affectedRows === 1) {
+      const cep = await cepServices.get(newCep.cep);
+      res.status(201).json(cep);
+    }
+  }
 }
 
 module.exports = {

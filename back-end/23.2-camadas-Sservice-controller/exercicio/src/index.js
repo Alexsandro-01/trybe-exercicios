@@ -1,5 +1,5 @@
 const express = require('express');
-require('express-async-error');
+require('express-async-errors');
 const cepControllers = require('./controllers/cepController');
 
 const api = express();
@@ -23,6 +23,9 @@ api.use((err, _req, res, _next) => {
       break;
     case 'notFound':
       res.status(404).json({ error: { code, message } });
+      break;
+    case 'alreadyExists':
+      res.status(409).json({ error: { code, message } });
       break;
       
     default:

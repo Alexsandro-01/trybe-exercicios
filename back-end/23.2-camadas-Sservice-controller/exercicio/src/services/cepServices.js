@@ -5,7 +5,7 @@ const cepModel = require('../models/cepModel');
 function isValid(cep) {
   const regex = /^[0-9]{5}-[0-9]{3}$/;
   if (!regex.test(cep)) {
-    return throwError('invalidData', 'CEP inválido!');
+    throwError('invalidData', 'CEP inválido!');
   }
   return true;
 }
@@ -14,9 +14,9 @@ async function exists(cep) {
   const exist = await cepModel.exists(cep);
 
   if (!exist) {
-    return throwError('notFound', 'CEP não encontrado');
+    throwError('notFound', 'CEP não encontrado');
   }
-  return true;
+  // return true;
 }
 
 async function get(cep) {
@@ -31,15 +31,30 @@ function validateNewCep(newCep) {
     logradouro: Joi.string().required(),
     bairro: Joi.string().required(),
     localidade: Joi.string().required(),
-    uf: Joi.string().max(2).required(),
+    uf: Joi.string().min(2).max(2).required(),
   });
 
   const result = schema.validate(newCep);
   if (result.error) {
-    return throwError('invalidData', result.error.message);
+    throwError('invalidData', result.error.message);
   }
 
   return false;
+}
+
+async function alreadyExists(cep) {
+  const exist = await cepModel.exists(cep);
+
+  if (exist) {
+    throwError('alreadyExists', 'CEP já existente');
+  }
+
+  return !!exist;
+}
+
+async function create(newCep) {
+  const data = await cepModel.create(newCep);
+  return data;
 }
 
 module.exports = {
@@ -47,4 +62,6 @@ module.exports = {
   exists,
   get,
   validateNewCep,
+  alreadyExists,
+  create,
 };

@@ -13,7 +13,17 @@ async function get(cep) {
   return data;
 }
 
+async function create(newCep) {
+  const { cep, logradouro, bairro, localidade, uf } = newCep;
+  const query = 'insert into ceps(cep, logradouro, bairro, localidade, uf) values(?, ?, ?, ?, ?)';
+
+  const [data] = await connection.query(query, [cep, logradouro, bairro, localidade, uf]);
+
+  return data;
+}
+
 module.exports = {
   exists,
   get,
+  create,
 };
