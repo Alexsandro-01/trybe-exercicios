@@ -3,9 +3,12 @@ require('express-async-error');
 const cepControllers = require('./controllers/cepController');
 
 const api = express();
+api.use(express.json());
 const PORT = '3000';
 
 api.get('/cep/:cep', cepControllers.get);
+
+api.post('/cep', cepControllers.create);
 
 api.get('/ping', (req, res) => {
   res.status(200).json({ message: 'pong!' });
