@@ -1,0 +1,1 @@
+insert into `user` (`name`, `email`) values ('Leandro', 'leandro.gomes@betrybe.com');
