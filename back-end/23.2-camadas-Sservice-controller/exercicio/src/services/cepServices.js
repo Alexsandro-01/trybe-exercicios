@@ -42,6 +42,10 @@ function validateNewCep(newCep) {
   return false;
 }
 
+// async function create(newCep) {
+  
+// }
+
 module.exports = {
   isValid,
   exists,

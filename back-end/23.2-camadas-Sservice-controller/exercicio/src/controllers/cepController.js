@@ -18,7 +18,9 @@ async function create(req, res, next) {
   
   const cepValid = cepServices.validateNewCep(newCep);
   
-  if (cepValid.error) next(cepValid.error);
+  if (cepValid.error) {
+    next(cepValid.error);
+  }
 
   // res.status(200).json({ message: 'I arrived there' });
 }

@@ -1,5 +1,5 @@
 const express = require('express');
-require('express-async-error');
+require('express-async-errors');
 const cepControllers = require('./controllers/cepController');
 
 const api = express();
