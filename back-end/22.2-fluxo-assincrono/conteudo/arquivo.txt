@@ -1,0 +1,9 @@
+Note que o exemplo acima realiza a leitura de um arquivo e após o término chama uma função de callback. Essa função recebe dois parâmetros:
+O primeiro, que chamamos de err, é um erro que pode ter ocorrido durante a leitura do arquivo.
+Observação: Caso nenhum erro tenha ocorrido, esse parâmetro será undefined.
+O segundo parâmetro, nesse caso, é o conteúdo do arquivo, que está em forma de uma sequência de bytes, chamados de content.
+Observação: Caso ocorra um erro na leitura do arquivo, esse parâmetro será undefined.
+Agora, vamos entender como esse código funciona:
+Primeiro, pedimos que o Node.js leia o arquivo e passamos uma função de callback;
+Quando a leitura do arquivo é concluída ou um erro acontece, a função callback é chamada;
+Dentro dela, a primeira coisa que fazemos é verificar se existe um erro. Caso exista, escrevemos ele no console e encerramos a execução com o return
