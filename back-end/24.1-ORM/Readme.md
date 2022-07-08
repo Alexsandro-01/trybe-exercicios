@@ -90,3 +90,24 @@ show databases;
 ```
 
 ➡️ Perceba que, a partir desses passos, o banco orm_example foi criado e você não precisou escrever nenhuma linha de SQL para isso. Essa é uma das primeiras vantagens que o Sequelize nos oferece. ⭐
+
+## Criando um model de tabela
+
+```
+npx sequelize model:generate --name User --attributes fullName:string
+```
+
+➡️ Substituir o conteudo da model por
+
+```
+const User = (sequelize, DataTypes) => {
+  const User = sequelize.define("User", {
+    fullName: DataTypes.STRING,
+    email: DataTypes.STRING,
+  });
+
+  return User;
+};
+
+module.exports = User;
+```
