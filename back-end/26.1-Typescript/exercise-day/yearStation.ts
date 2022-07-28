@@ -20,6 +20,6 @@ enum stations {
   summer,
 }
 
-console.log(stations[0]);
+const northAutumn: Array<months> = []
 
 
