@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "5a042a81-c90a-4436-8c69-f15eda6821d1",
+    "colId": "b65af8e6-5c47-4d9c-be29-0b38fe142d4e",
+    "containerId": "92d4b70a-53f9-4a0a-a822-2f532d927649",
+    "name": "getUser",
+    "url": "localhost:3000/user/1",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-06-24T21:29:57.118Z",
+    "modified": "2022-06-24T21:30:04.107Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
